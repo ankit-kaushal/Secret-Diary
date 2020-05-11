@@ -7,6 +7,6 @@ An web Application that can be used as Diary.Here, a sign up/Log in system is im
     <li>CSS</li>
     <li>PHP</li>
     <li>MySQL</li>
-    <li>jQuery</li>
+    <li>jQuery(AJAX)</li>
     <li>Bootstrap</li>
     </ul>
