@@ -70,13 +70,15 @@
 
 	    					$query = "UPDATE `users` SET password = '".md5(md5(mysqli_insert_id($link)).$_POST['password'])."' WHERE id = ".mysqli_insert_id($link)." LIMIT 1";
 
+	    					$id = mysqli_insert_id($link);
+
 	    					mysqli_query($link, $query);
 
-	    					$_SESSION['id'] = mysqli_insert_id($link);
+	    					$_SESSION['id'] = $id;
 
 	    					if (isset($_POST['stayLoggedIn']) && $_POST['stayLoggedIn'] == '1'){
 
-	    						setcookie("id", mysqli_insert_id($link), time()+60*60*24*365);
+	    						setcookie("id", $id, time()+60*60*24*365);
 
 	    					}
 
